@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('profil_sekolah', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_sekolah');
+            $table->string('alamat_sekolah');
+            $table->string('no_telepon');
+            $table->string('email')->unique();
+            $table->string('logo')->nullable();
+            $table->string('status')->default('aktif');
             $table->timestamps();
         });
     }
