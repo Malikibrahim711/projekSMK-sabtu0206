@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('matpel', function (Blueprint $table) {
             $table->id();
+            $table->string('bahasa_indonesia');
+            $table->string('bahasa_inggris');
+            $table->string('matematika');
+            $table->string('ipa');
+            $table->string('ips');
+            $table->string('status')->default('aktif');
             $table->timestamps();
         });
     }
